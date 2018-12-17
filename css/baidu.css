@@ -1,0 +1,129 @@
+body{
+        margin: 0px;
+        min-width: 660px
+}
+nav{
+        font-size: 13px;
+        height: 3em;
+}
+ul{
+        list-style: none;
+        margin: 0;padding: 0;
+}
+.nmb{
+        margin: 0.5em 0;
+        float: right;
+}
+.nmb li,.footerItem li{
+        float:left;
+        margin-right:1.5em;
+        line-height:2em;
+}
+.nmb li a:hover,.footerItem li a:hover{
+        color: red;
+}
+#more{
+        background-color:blue;
+        padding:0 0.5em;
+}
+#more a{
+        color: black;
+        text-decoration: none;
+}
+#more>a{
+        color:white;
+}
+section{
+        text-align:center;
+        font-size: 14px;
+}
+section input{
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+}
+section input[type=text]{
+        width: 40em;
+        padding-left: 0.5em;
+}
+section input[type=button]{
+        background-color: blue;
+        width: 6em;
+        height: 28px;
+        color: white;
+}
+section .center,.center_left,.center_right{display: inline-block;}
+.center_left{border: 1px solid gray;border-right: 0px;float: left;height: 28px;line-height: 28px;}
+.center_right{float: left;height: 28px;border: 1px solid blue;border-left: 0px;}
+section img{margin-bottom: 2em;}
+footer{font-size: 12px;margin-top: 15%}
+.footerItem{width: 602px;margin: 0 auto;}
+.footerItem li span:nth-child(1){font-weight: bold;}
+.footerItem li span:nth-child(3){color: grey;}
+.footerItem li div:nth-child(1) a{color: black;}
+.footerItem li div:nth-child(2) a,.footerItem li div:nth-child(2) {color: gray;}
+.settings{position: relative}
+.settings:hover .setbox{display: block;}
+.setbox{border: 1px solid gray;position: absolute;top: 2.5em;left: 50%;margin-left: -2.5em;display: none;
+box-shadow: 5px 0 20px gray;}
+.setItem{position: relative;z-index:3;}
+.setItem li{float: none;width: 5em;text-align: center;margin: 0px}
+.setItem li:hover{background-color: blue;color: white;cursor: pointer;}
+.box{width: 1.5em;height: 1.5em;position:absolute;top:-1.5em;left:50%;margin-left: -0.75em;}
+.triangle1,.triangle2{height: 0;width: 0;border: 0.75em solid gray;
+        border-left-color: transparent;
+        border-top-color: transparent;
+        border-right-color: transparent;}
+.triangle2{border-bottom-color: white;position: absolute;bottom: -0.5px;}
+#more:hover>div{display: block;}
+#more>div{
+        position: fixed;
+        height: 100%;
+        right: 0;
+        top: 0;
+        border-left: 1px solid gray;
+        background-color: white;
+        width: 8em;
+        display: none;
+        text-align: center;
+}
+#more>div span{
+        display:block;
+        line-height: 2em;
+        margin: 0.5em auto;
+}
+.imglist{background-image:url("../img/imglist.png");
+        background-repeat: no-repeat;
+}
+#more .imgItem{display:block;text-align: center;color: gray;}
+#more .imgItem:hover{text-decoration: underline;color:pink;}
+.music{width: 42px;height: 41px;background-position: -72px 0px;}
+.tupian{width: 37px;height: 41px;background-position: -112px 0px;}
+.zhidao{width: 36px;height: 41px;background-position: -36px 0px;}
+.wenku{width: 31px;height: 41px;background-position: -149px 0px;}
+.fengyunbang{width: 42px;height: 41px;background-position: -180px 0px;}
+.baidutuiguang{width: 38px;height: 41px;background-position: -220px 0px;}
+#more .imgItem:last-child{text-decoration: underline;}
+#backgroundColor{position:fixed;width:100%;height:100%;left:0px;top:0px;background-color: gray;opacity: 0.5;display: none}
+#loginForm{position:fixed;left:50%;top:50%;width:260px;height:310px;background-color: white;
+        border: 1px solid black;margin: -176px 0 0 -151px;padding: 20px 20px;display: none;}
+#loginForm div{margin: 2em 0;}
+#loginForm input[type=button]{border: none;outline: none;color:white;background-color: black;
+        width:100%;height: 3em;border-radius: 5px;}
+#loginForm input[type=button]:hover{cursor: pointer;background-color: gray;}
+#close{position: absolute;right:5px;top:5px;background-color: red;color: white;border-radius: 20px;
+width:1em;height:1em;text-align: center;line-height: 0.8em;font-size: 1.5em;}
+#close:hover{cursor: pointer;background-color: gray;}
+
+#box ul{border: 1px solid gainsboro;border-top: 1px solid transparent;}
+#box li {
+        cursor: pointer;
+text-align: left}
+#box li:hover {
+        background: #ccc; }
+.gray {
+        background: #ccc; }
+.center_right input{cursor: pointer;}
+
+
