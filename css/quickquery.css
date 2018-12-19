@@ -1,0 +1,237 @@
+
+
+.quickly-find{
+    margin: 0 auto;
+    padding:10px;
+    margin-top:10px;
+}
+.hotkey {
+    position: relative;
+    font-size: 0;
+    height:40px;
+    color: #666;
+}
+
+.hotkey .txt,.hotkey .select,.hotkey .key-value,.hotkey a {
+    float: left;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 2.125em
+}
+
+.hotkey .key-value {
+    width: 12.1875em;
+    text-align: center;
+}
+
+.hotkey .select {
+    position: relative;
+    margin-right: 1.25em;
+    user-select: none;
+}
+
+.hotkey .select .icon {
+    position: absolute;
+    right: 11px;
+    top: 15px;
+    width: 15px;
+    height: 6px;
+    background: url(../images/arrow_down.png) no-repeat;
+}
+
+.hotkey .select .icon.down {
+    background-image: url(../images/arrow_down.png);
+}
+
+.hotkey .select .icon.up {
+    background-image: url(../images/arrow_up.png);
+}
+
+.hotkey .select-value {
+    display: inline-block;
+    width: 14.375em;
+    height: 2.25em;
+    background-color: #fafafa;
+    border: 1px solid #e6e6e6;
+    text-align: center;
+    cursor: pointer;
+    color: #666;
+}
+
+.hotkey .select-list {
+    position: absolute;
+    left: 0;
+    top: 2.1875em;
+    z-index: 99;
+    width: 99%;
+    display: none;
+    border: 1px solid #e6e6e6;
+    background-color: #fff;
+    -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.hotkey .select-list ul {
+    max-height: 10.625em;
+    overflow-y: auto;
+}
+
+.hotkey .select-list ul::-webkit-scrollbar {
+    width: 5px;
+    background-color: #fff;
+}
+
+.hotkey .select-list ul::-webkit-scrollbar-button {
+    display: none;
+}
+
+.hotkey .select-list ul::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.hotkey .select-list li {
+    font-size: .88889em;
+    padding: 0 1em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hotkey .select-list li.disabled {
+    font-size: .8em;
+    color: #999;
+    cursor: default;
+}
+
+.hotkey .select-list li:not(.disabled):hover {
+    color: #1c85cc;
+}
+
+.hotkey .txt {
+    margin-right: 20px;
+}
+
+.hotkey a {
+    position: absolute;
+    right: 0;
+    color: #666;
+}
+
+.hotkey a:hover {
+    color: #666;
+    text-decoration: underline;
+}
+
+.hotkey a i {
+    font-family: Simsun;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.main-content {
+    font-size: 14px;
+    background-color: #fff;
+    width:916px;
+    margin:auto;
+    margin-top: 0;
+}
+
+.hotkey {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hotkey-list {
+    overflow: hidden;
+    cursor: default;
+}
+
+.hotkey-list-side {
+    float: left;
+    font-size: 16px;
+}
+
+.hotkey-list-side li {
+    margin-bottom: 2em;
+}
+
+.hotkey-list-side a {
+    color: inherit;
+}
+
+.hotkey-list-side .active {
+    color: #1c85cc;
+}
+
+.hotkey-list-body {
+    font-size: 14px;
+    margin-left: 11.07143em;
+}
+
+.hotkey-list-body .th {
+    font-size: 0;
+    color: #999;
+}
+
+.hotkey-list-body .th span {
+    display: inline-block;
+    font-size: 14px;
+    width:20%;
+}
+.hotkey-list-body .th span:nth-child(3) {
+    padding-left:220px;
+}
+.hotkey-list-body .th span:nth-child(4) {
+    display:inline-block;
+    width:auto;
+}
+
+.hotkey-list-body dl {
+    position: relative;
+    z-index: 1;
+    margin: 1.5em 0;
+    text-align: center;
+}
+
+.hotkey-list-body dl:before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    z-index: -1;
+    background-color: #ccc;
+}
+
+.hotkey-list-body dt {
+    display: inline-block;
+    font-size: 1.14286em;
+    margin-bottom: 1em;
+    padding: 0 1.25em;
+    background-color: #fff;
+    text-align: center;
+}
+
+.hotkey-list-body dd {
+    text-align: left;
+    margin-left: 0;
+    font-size: 0;
+}
+
+.hotkey-list-body dd .wrap-list li span{
+    display:inline-block;
+    font-size:14px;
+    width:20%;
+    color: #333;
+    vertical-align: top;
+    margin-bottom: 1.42857em;
+}
+.hotkey-list-body dd .wrap-list li span:nth-child(2){
+    padding-right:220px;
+}
+.hotkey-list-body dd .wrap-list li span:nth-child(4){
+    display: inline-block;
+    width:auto;
+}
