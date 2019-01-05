@@ -1,0 +1,39 @@
+﻿*{margin:0;padding:0;font-family:"微软雅黑" Arial; font-size:1rem;}
+ul, li { list-style:none;}
+.clear{ clear:both;}
+.main { width:96%; padding:5px 2%;}
+
+.maintop h1 { font-size:1rem; color:#666666; line-height:20px; font-weight:300; float:left;}
+.maintop h1 span { font-size:1rem; color:#FF0000; line-height:20px; font-weight:300;}
+.maintop a { font-size:1rem; color:#0092dd; float:right;}
+.maintop .greenspan { font-size:1rem; color:#009900; float:left; margin-left:.2rem;}
+
+.mainmiddle { width:100%; margin:5px auto;}
+.mainmiddle ul li { float:left; margin-right:2.3%; width:10%;}
+.mainmiddle ul li:last-child { margin-right:0;}
+.mainmiddle ul li span{ display:block; width:100%; height:30px; font-size:1rem; line-height:30px; text-align:center;}
+.mainmiddle ul li span.red{ background-color:#FF0000; color:#FFFFFF; border:1px solid #FF0000;}
+.mainmiddle ul li span.blue{ background-color:#0092dd; color:#FFFFFF; border:1px solid #0092dd;}
+.mainmiddle ul li span.green{ background-color:#009900; color:#FFFFFF; border:1px solid #009900;}
+.mainmiddle ul li span:last-child{ background-color:#FFFFFF; color:#666666; border-left:1px solid #CCCCCC; border-right:1px solid #CCCCCC; border-bottom:1px solid #CCCCCC;}
+.mainmiddle ul li .jiahao { display:block; background-color:#FFFFFF; color:#363636; font-size:x-large; line-height:4.5rem; text-align:center;}
+
+.mainbottop { font-size:1rem; color:#666666; line-height:20px;}
+.mainbottop span { font-size:1rem; color:#FF0000; line-height:20px;}
+
+/*@media screen and (min-width: 1024px)
+{
+    *{font-size:6vw;}
+}
+@media screen and (max-width: 1024px) and (max-width:721px)
+{
+    *{font-size:20vw;}
+}
+@media screen and (max-width: 720px) and (max-width:641px)
+{
+    *{font-size:20vw;}
+}
+@media screen and (max-width:640px)
+{
+    *{font-size:26vw;}
+}*/
