@@ -1,0 +1,127 @@
+﻿<title>①指标公式</title>
+<style type="text/css">
+<!--
+.STYLE1 {color: #FF0000}
+.STYLE2 {color: #0000FF}
+.STYLE3 {color: #00ffff}
+.STYLE4 {color: #c0c0c0}
+.STYLE5 {color: #ffff00}
+.STYLE6 {
+	color: #FF00FF;
+	font-size: 18px;
+}
+.STYLE7 {color: #FFFFFF}
+.STYLE11 {color: #FF00FF}
+.STYLE12 {color: #00FF00}
+-->
+</style>
+</head>
+<body>
+
+
+
+
+
+		<table width="100%" cellspacing="0" cellpadding="0" data-sort="sortDisabled"><tbody><tr class="firstRow">
+		<td bgcolor="#0000ff" style="padding: 3px 2px; border-color: rgb(229, 229, 229); margin: 0px;" width="944"><p class="STYLE7" style="margin-bottom: 8px; text-align: center;"><strong>通达信识别突破主图指标公式</strong></p></td>
+		</tr><tr>
+		  <td bgcolor="#000000" width="944"><span style="color: #00FF00;"><strong>通达信识别突破主图指标公式:<span class="STYLE1">TJ:=EVERY(L>REF(L,1),3) AND EVERY(REF(L,3)<REF(L,4),3) AND REF(L,3)=LLV(L,10);
+A1:=BARSLAST(CURRBARSCOUNT=CONST(BARSLAST(TJ))+4);
+ZD:REF(L,A1);
+T1:=(COUNT(ZD>L,A1)=1 AND ZD>L) AND A1>5 AND H/L>1.04;
+A2:=BARSLAST(CURRBARSCOUNT=CONST(BARSLAST(T1))+1);
+ZG:REF(H,A2),COLORCYAN,DOTLINE;
+DRAWTEXT(A1+1,L*0.99,'前底'),COLORYELLOW;
+DRAWTEXT(A2+1,H,'假破'),DRAWABOVE,COLORYELLOW;
+DRAWICON(A2+1,L,2);
+DRAWICON(COUNT(C>ZG,A2)=1 AND C>ZG AND A2<30,L,1);
+DRAWTEXT(COUNT(C>ZG,A2)=1 AND C>ZG AND A2<30,H,'买入'),DRAWABOVE,COLORYELLOW;</span>……Pests.cc</strong></span></td>
+		</tr><tr>
+
+		
+		<td bgcolor="#0000ff" style="padding: 3px 2px; border-color: rgb(229, 229, 229); margin: 0px;" width="944"><p class="STYLE7" style="margin-bottom: 8px; text-align: center;"><strong>通达信箱体起跑线主图指标公式</strong></p></td>
+		</tr><tr>
+		  <td bgcolor="#000000" width="944"><span style="color: #00FF00;"><strong>通达信箱体起跑线主图指标公式<span class="STYLE1">MMS:=MA(SMA((L+H+2*C)/4-REF((L+H+2*C)/4,1),5,1)/SMA(ABS((L+H+2*C)/4-REF((L+H+2*C)/4,1)),5,1)*100,1)+50;
+G1:=IF(-MMS>95,0,20);
+UOO:=(-(((CLOSE-LLV(CLOSE,7))/(HHV(CLOSE,7)-LLV(CLOSE,7))*100=100)>0 AND G1)+1);
+明日均线:=REF(C,2)*2-REF(C,5),LINETHICK0,COLOR550055 ;
+后日均线:=REF(C,1)*2-REF(C,4),LINETHICK0,COLOR008800;
+大后天均线:=C*2-REF(C,3),LINETHICK0,COLOR008888;
+KS:=(((CLOSE - EMA(CLOSE,13)) / EMA(CLOSE,13)) * (0 - 100));
+KS1:=IF(BARSCOUNT(C)=1,C/10000,(1-C/SMA(C,13,1))*100);
+趋势线:=EMA(((KS / 10) + EMA(CLOSE,10)),3);
+AA:= - 100 * (趋势线 - CLOSE) / 趋势线;
+AC:=(EMA(AA,5) );
+SSL:=EMA(CLOSE,5);
+MMV:=EMA(((SLOPE(CLOSE,22) * 20) + CLOSE),55);
+MM:=(IF(((DAY > 5) AND (DAY < 9)),MA(MMV,1),IF((DAY = 5),MA(MMV,4)
+,IF((DAY = 4),MA(MMV,8),IF((DAY = 3),MA(MMV,16)
+,IF((DAY = 2),MA(MMV,32),1))))) );
+{STICKLINE(((SSL > MM) ),SSL,MM,0.1,0),COLORRED;}
+SA:=(MM * 0.985);
+SS:=(MA(CLOSE,18));
+DD:=(MA(CLOSE,13));
+GG:=(MA(CLOSE,21));
+捞钱手:IF(((SSL>MM)),SS,SA),COLORFF00FF,LINETHICK2;
+K1:=BACKSET(捞钱手<REF(捞钱手,1),2);
+IF(K1,捞钱手,DRAWNULL),COLORFFFFCC,LINETHICK2;
+VAR2Y:=(((CLOSE - REF(CLOSE,1)) / REF(CLOSE,1)) * 100);
+VAR3Y:=(((CLOSE - REF(OPEN,29)) / REF(OPEN,29)) * 100);
+VAR4Y:=REF(CLOSE,1);
+VAR5Y:=((SMA(MAX((CLOSE - VAR4Y),0),6,1) / SMA(ABS((CLOSE - VAR4Y)),6,1)) * 100);
+VAR6Y:=((SMA(MAX((CLOSE - VAR4Y),0),12,1) / SMA(ABS((CLOSE - VAR4Y)),12,1)) * 100);
+VAR7Y:=((SMA(MAX((CLOSE - VAR4Y),0),24,1) / SMA(ABS((CLOSE - VAR4Y)),24,1)) * 100);
+VAR8Y:=(((CLOSE - LLV(LOW,45)) / (HHV(HIGH,45) - LLV(LOW,45))) * 100);
+VAR9Y:=SMA(VAR8Y,3,1);
+VARAY:=SMA(VAR9Y,3,1);
+VARBY:=((3 * VAR9Y) - (2 * VARAY));
+VARCY:=(CROSS(VAR5Y,10) AND (VAR3Y < (0 - (28 * 20))));
+VARDY:=((100 - CROSS(76,VAR5Y)) AND (VAR3Y > (5 * 20)));
+DRAWICON(((CROSS(76,VAR5Y) AND (VAR3Y > 5)) ),(HIGH * 1.01),2),COLORFFFFFF;
+VAREY:=((((CROSS(VAR9Y,VARAY) AND (VARAY < 10)) AND (VAR3Y < (0 - 30))) AND (VAR2Y > 3)) * 30);
+VARFY:= - ((((VARAY < 11) AND (VAR5Y < 15)) AND (VAR3Y < (0 - 26))) * 10);
+DRAWICON((CROSS(VARFY,(0 - 9))),(LOW * 0.998),4);
+能量线:=DMA(((CLOSE + OPEN) / 2),(VOL / (SMA(VOL,4,1) * 4)));
+上开:=O;
+上收:=C;
+上高:=H;
+上低:=L;
+JJ:=(上开+上高+上低)/3;
+A:=EMA(JJ,4);
+B:REF(A,1),POINTDOT,COLORYELLOW,LINETHICK4;
+虎门德哥仔:A,COLORYELLOW,LINETHICK1; 
+STICKLINE(虎门德哥仔>捞钱手,虎门德哥仔,捞钱手,0.01,1),COLOR0000FF;
+STICKLINE(虎门德哥仔<捞钱手,虎门德哥仔,捞钱手,0.01,1),COLORCYAN;
+VA1:=EMA(上收,8);
+VA2:=EMA(上收,20);
+DRAWTEXT(CROSS(VA2,VA1),H+0.12,'止\N损')COLORYELLOW;
+DRAWTEXT(CROSS(VA1,VA2)AND(C>=O)AND 虎门德哥仔>REF(虎门德哥仔,1),VA1*0.98,'★买入'),COLOR00FF00;
+选手Ａ:=MA(上收,3);
+箱顶Ａ:=MA(REF(HHV(上收,6),1),3);
+箱底Ａ:=MA(REF(LLV(上收,3),1),3);
+T1:=MA(上收,20)>=REF(MA(上收,20),1);
+T2:=CROSS(选手Ａ,箱底Ａ) AND 箱顶Ａ/箱底Ａ>100/100 AND T1;
+T3:=CROSS(箱顶Ａ,选手Ａ) AND 箱顶Ａ/箱底Ａ>100/100;
+选手:=MA(上收,2);
+箱顶:MA(REF(HHV(上收,30),1),2),COLOR0000FF,LINETHICK2;
+箱底:MA(REF(LLV(上收,30),1),2),COLOR00FF00,LINETHICK2;
+IF(A>REF(A,1),A,DRAWNULL),COLORYELLOW,LINETHICK5;
+IF(A<REF(A,1),A,DRAWNULL),COLORGREEN,LINETHICK1;</span>……Pests.cc</strong></span></td>
+		</tr><tr>
+
+		
+	
+		
+		
+		
+		
+				</table> 
+
+<table width="100%" height="60" id="table400913488">
+<tr><td height="28" bgcolor="#ffffff" align="center"></td></tr>
+</table>
+
+
+
+</body>
+</html>
